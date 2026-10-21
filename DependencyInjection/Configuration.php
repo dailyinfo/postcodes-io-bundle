@@ -16,8 +16,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('box_uk_postcodes_io')
+        $treeBuilder = new TreeBuilder('box_uk_postcodes_io');
+        $treeBuilder->getRootNode()
             ->children()
             ->scalarNode('base_url')
             ->defaultValue(ClientFactory::DEFAULT_BASE_URL)
